@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes();?>>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <div class="contenedor barra-navegacion">
+            <div class="logo">
+                <img src="<?php echo get_template_directory_uri();?>/img/logo.svg" alt="logotipo">
+            </div>
+            <nav>
+            
+            </nav>
+
+        </div>
+    </header>
     <main>
             <?php
                 while(have_posts()):the_post(  );
