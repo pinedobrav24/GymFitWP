@@ -8,7 +8,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="contenedor barra-navegacion">
             <div class="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="logotipo">
@@ -16,9 +16,9 @@
             
             <?php
                 $args = array(
-                    'theme_location'=>'menu-principal', //memu
-                    'container'=>'nav',  //tipo de contenedor
-                    'container'=>'menu-principal' //clase
+                    'theme_location' => 'menu-principal', //memu
+                    'container' => 'nav',  //tipo de contenedor
+                    'container_class' => 'menu-principal' //clase
                 );
 
                 wp_nav_menu($args); //especificar el menú incluido en el args
