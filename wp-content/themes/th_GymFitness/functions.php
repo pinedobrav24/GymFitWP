@@ -1,5 +1,14 @@
 <?php
 
+function gf_setup(){
+    //imaen destacada
+    add_theme_support('post-thumbnails');
+
+    //Titulos para SEO
+    add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme','gf_setup');
 
 function gf_menus(){
     register_nav_menus( array(
