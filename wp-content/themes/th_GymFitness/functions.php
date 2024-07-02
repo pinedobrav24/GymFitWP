@@ -1,7 +1,7 @@
 <?php
 
 function gf_setup(){
-    //imaen destacada
+    //imagen destacada
     add_theme_support('post-thumbnails');
 
     //Titulos para SEO

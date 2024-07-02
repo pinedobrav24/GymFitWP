@@ -132,7 +132,6 @@ img {
 .header {
   background-color: var(--gris-oscuro);
   padding: 2rem 0;
-  margin: 0;
 }
 
 .barra-navegacion {
@@ -251,4 +250,72 @@ img {
     font-size: 2.4rem;
     margin: 0;
   }
+}
+
+/* ------- CARDS ------------*/
+
+.listado-grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .listado-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background-image: linear-gradient(to bottom, transparent 0, rgb(0 0 0 / 0.7));
+  position: relative; /* envia elemento al fondo*/
+  overflow: hidden;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+.card img {
+  display: block;
+  position: relative; /* trae elemento al frente */
+  z-index: -1;
+  height: 40rem;
+  object-fit: cover; /* ajusta imagen*/
+  transition: transform 300ms ease;
+}
+
+.card .contenido {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 2rem;
+}
+
+.card .contenido h3 {
+  color: var(--blanco);
+  margin: 0;
+}
+
+.card .contenido p {
+  color: var(--blanco);
+}
+
+/* ------SIDEBAR --------*/
+
+@media (min-width: 768px) {
+  .con-sidebar {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.informacion-clase {
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  background-color: var(--primario);
+  color: var(--blanco);
+  padding: 0.5rem 3rem;
 }
