@@ -319,3 +319,30 @@ img {
   color: var(--blanco);
   padding: 0.5rem 3rem;
 }
+
+/* ----SIDEBAR - LISTADOS DE CLASES -------*/
+.clases-sidebar li {
+  border-bottom: 1px solid var(--gis-claro);
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.clases-sidebar li:last-of-type {
+  border: none;
+}
+
+.clases-sidebar .contenido-clase h3 {
+  margin: 0;
+  font-size: 2.6rem;
+}
+
+.clases-sidebar .contenido-clase a {
+  color: var(--primario);
+}
+
+.clases-sidebar .contenido-clase p {
+  font-size: 1.2rem;
+}
