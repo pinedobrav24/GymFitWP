@@ -24,9 +24,13 @@ function gf_menus(){
 add_action('init','gf_menus');
 
 function gf_scripts_styles(){
+    //Archivos css
     wp_enqueue_style('normalize', get_stylesheet_uri(), array(),'8.0.1');
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize'),'1.0.0');  //nombre de hoja de estilos, ubicacion, paginas previas, version
-    
+    wp_enqueue_style('lightboxcss', get_template_directory_uri() . '/css/lightbox.min.css',array(),'2.11.3');
+
+    //Archivos js
+    wp_enqueue_script('lightboxjs', get_template_directory_uri(). '/js/lightbox.min.js', array('jquery'), '2.11.3',true);
 }
 
 add_action('wp_enqueue_scripts', 'gf_scripts_styles');
