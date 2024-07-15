@@ -1,10 +1,13 @@
 <?php
  get_header();
 ?>
-
+<h1>desde index.php</h1>
     <main class="contenedor seccion">
             <?php
-               get_template_part('template-parts/pagina');
+               while(have_posts()):the_post();
+                   the_title();
+                   the_content();
+                endwhile;
             ?>
     </main>
         <?php  
