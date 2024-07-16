@@ -13,15 +13,19 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="logotipo">
             </div>
             
-            <?php
-                $args = array(
-                    'theme_location' => 'menu-principal', //memu
-                    'container' => 'nav',  //tipo de contenedor
-                    'container_class' => 'menu-principal' //clase
-                );
 
-                wp_nav_menu($args); //especificar el menú incluido en el args
-            ?>
-
+            <nav class="menup">
+                <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'menu-principal', //memu
+                            'menu_class' => 'menu-principal', //clase
+                            'container' => 'ul',  //tipo de contenedor
+                            'depth'=>2,
+                            )
+                        );
+                ?>
+            </nav>
+            
         </div> 
     </header>
