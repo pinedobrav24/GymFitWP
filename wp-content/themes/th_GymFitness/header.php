@@ -14,7 +14,7 @@
             </div>
             
 
-            <nav class="menup">
+            <nav>
                 <?php
                     wp_nav_menu(
                         array(

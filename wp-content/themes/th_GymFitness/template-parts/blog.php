@@ -1,4 +1,5 @@
 <li class="card">
+    <?php the_category(); ?>
     <?php the_post_thumbnail(); ?>
     <div class="contenido">
         <a href="<?php the_permalink(); ?>">
@@ -12,7 +13,7 @@
             </a>
         </p>
         <p class="meta">
-            <span>Por: </span>
+            <span>Fecha: </span>
             <?php the_time(get_option('date_format'));?>
         </p>
     </div>
