@@ -57,4 +57,19 @@ function gf_widgets(){
     ));
     }
 add_action('widgets_init','gf_widgets'); //habilita zona de widgets
-?>
+
+function gf_ubicacion_shortcode(){
+    ?>
+    <div class="mapa">
+        <?php
+            if(is_page('contacto')){
+                the_field('ubicacion');
+            }
+        ?>
+    </div>
+    <h2 class="text-primary text-center ">Formulario</h2>
+    <?php
+    echo do_shortcode('[contact-form-7 id="de545ef" title="Contact form 1"]');
+}
+
+add_shortcode( 'gf_ubicacion','gf_ubicacion_shortcode' );

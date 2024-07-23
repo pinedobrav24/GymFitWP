@@ -10,7 +10,10 @@
     <header class="header">
         <div class="contenedor barra-navegacion">
             <div class="logo">
+                <a href="echo <?php site_url('/');?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="logotipo">
+                </a>
+                
             </div>
             
 

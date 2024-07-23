@@ -493,3 +493,48 @@ img {
   padding: 0 0.7rem;
   font-weight: 700;
 }
+
+/* -------------- CONTACTO ----------------*/
+
+.wpcf7-form label {
+  font-weight: 700;
+}
+
+.wpcf7-form .wpcf7-form-control {
+  width: 100%;
+  border: 1px solid var(--gis-claro);
+  padding: 1rem;
+}
+
+.wpcf7-form .wpcf7-submit {
+  background-color: var(--primario);
+  font-size: 2rem;
+  font-family: var(--fuente-headings);
+  padding: 1.2rem;
+  color: var(--blanco);
+}
+
+.wpcf7-form .wpcf7-submit:hover {
+  cursor: pointer;
+}
+
+.wpcf7-form .wpcf7-not-valid-tip {
+  background-color: rgb(156, 7, 7);
+  color: var(--blanco);
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: block;
+}
+
+.wpcf7-form .wpcf7-spinner {
+  display: block;
+  margin: 2rem auto 0 auto;
+  background-color: var(--primario);
+  opacity: 1;
+}
+
+.mapa {
+  margin-bottom: 5rem;
+}
