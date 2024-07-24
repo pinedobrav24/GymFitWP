@@ -56,7 +56,14 @@
                     </a>
                 </div>  
            
-        </main>
+    </main>
+    <section class="contenedor seccion">
+        <h2 class="text-center text-primary">Nuestros Instructores</h2>
+        <p class="text-center">Instructores profesionales que te ayudaran a lograr tus objetivos</p>
+
+        <?php gf_instructores(4); ?>
+    </section>
+
 <?php  
     get_footer();
 ?> 
