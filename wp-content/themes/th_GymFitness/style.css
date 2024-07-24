@@ -109,6 +109,39 @@ img {
   width: min(95%, 80rem);
   margin: 0 auto;
 }
+
+.contenedor-boton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*---Botones---*/
+
+.boton {
+  background-color: var(--blanco);
+  color: var(--negro);
+  padding: 1rem 3rem;
+  display: block;
+  flex: 1;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .boton {
+    display: inline-block;
+    flex: 0 0 auto;
+  }
+}
+
+.boton-primario {
+  background-color: var(--primario);
+  color: var(--blanco);
+}
+
 /*-------Utilidades-------*/
 
 .text-center {
@@ -537,4 +570,75 @@ img {
 
 .mapa {
   margin-bottom: 5rem;
+}
+
+/*-------HOME-------*/
+
+.bienvenida p {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.areas {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 480px) {
+  .areas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .areas {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.area {
+  height: 25rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.area::after {
+  content: "";
+  background-image: linear-gradient(rgb(0 0 0 /0.75), rgb(0 0 0 /0.75));
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.area img {
+  height: 25rem;
+  width: 50rem;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .area,
+  .area img {
+    height: 30rem;
+  }
+}
+
+.area p {
+  position: absolute;
+  color: var(--blanco);
+  z-index: 100;
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .area p {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .area:hover p {
+    opacity: 1;
+  }
 }
