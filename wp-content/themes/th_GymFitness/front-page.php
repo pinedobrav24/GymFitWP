@@ -64,6 +64,15 @@
         <?php gf_instructores(4); ?>
     </section>
 
+    <section class="testimoniales">
+        <h2 class="text-center text-blanco">Testimoniales</h2>
+        <div class="contenedor-testimoniales swiper">
+            <?php gf_testimoniales(3);?>
+        </div>
+        
+
+    </section>
+
 <?php  
     get_footer();
 ?> 

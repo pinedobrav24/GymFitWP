@@ -709,3 +709,62 @@ img {
 .instructor .etiqueta:last-of-type {
   margin-right: 0;
 }
+
+/*-----Testimonialeas-------*/
+
+.testimoniales {
+  background: linear-gradient(rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.75)),
+    url(img/testimonial-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: 12rem 0;
+}
+
+.contenedor-testimoniales {
+  width: min(95%, 80rem);
+  margin: 0 auto;
+}
+
+.testimonial {
+  color: var(--blanco);
+}
+
+.testimonial blockquote {
+  position: relative;
+  padding-left: 12rem;
+}
+
+.testimonial blockquote::before {
+  position: absolute;
+  content: "";
+  background-image: url(img/quote.svg);
+  background-repeat: no-repeat;
+  width: 10rem;
+  height: 9rem;
+  top: 0;
+  left: 0;
+}
+
+.testimonial-footer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .testimonial-footer {
+    justify-content: flex-end;
+  }
+}
+
+.testimonial-footer img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.testimonial-footer p {
+  color: var(--primario);
+  font-weight: 700;
+}
