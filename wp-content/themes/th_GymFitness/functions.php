@@ -80,3 +80,32 @@ function gf_ubicacion_shortcode(){
 }
 
 add_shortcode( 'gf_ubicacion','gf_ubicacion_shortcode' );
+
+/* ---- Imagenes dinamicas como BG ---*/
+
+function gf_hero_imagen(){
+    //obtener el id de la pagina
+    $front_id=get_option('page_on_front');
+    
+    //obtener el id de la imagen
+    $id_imagen=get_field('hero_imagen',$front_id);
+    
+    //obtener la ruta de la imagen
+    $imagen=wp_get_attachment_image_src($id_imagen,'full')[0];
+    
+    //crear css
+    wp_register_style('custom',false);  //hoja virtual en donde archivo de hoja de estilos
+    wp_enqueue_style('custom');
+
+    $imagen_destacada_css="
+        body.home .header{
+            background-image:linear-gradient(rgb(0 0 0 / .70),rgb(0 0 0 / .70)),url($imagen);
+        }
+    ";
+    //inyectar css a la imagen
+
+    wp_add_inline_style('custom',$imagen_destacada_css);
+}
+
+add_action('init','gf_hero_imagen');
+

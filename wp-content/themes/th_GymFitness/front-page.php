@@ -69,8 +69,20 @@
         <div class="contenedor-testimoniales swiper">
             <?php gf_testimoniales(3);?>
         </div>
-        
+    </section>
 
+    <section class="contenedor seccion">
+        <h2 class="text-center text-primary">Nuestro Blog</h2>
+        <p class="text-center">Aprende de nuestros tip de nuestros instructores expertos</p>
+    
+       <!-- para seguir la forma de las anteriores secciones puse dentro de una funcion lo propuesto en video !-->
+        <?php gf_blogs(4);?>
+
+        <div class="contenedor-boton"> 
+                    <a href="<?php echo esc_url(get_permalink(get_page_by_title('Blog'))) ;?>" class="boton boton-primario">
+                        Ver más
+                    </a>
+                </div> 
     </section>
 
 <?php  

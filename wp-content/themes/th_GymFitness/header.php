@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class();?>>
     <header class="header">
         <div class="contenedor barra-navegacion">
             <div class="logo">
@@ -29,6 +29,14 @@
                         );
                 ?>
             </nav>
-            
         </div> 
+
+        <!-- validar si la pagina que esta llamando al header es el front-page (pagina de inicio) !-->
+        <?php
+            if(is_front_page()){ ?>
+              <div class="tagline text-center contenedor">
+                <h1><?php the_field('hero_heading');?></h1>
+                <p><?php the_field('hero_texto');?></p>
+              </div>  
+        <?php } ?>       
     </header>

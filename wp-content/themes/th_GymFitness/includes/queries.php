@@ -107,4 +107,26 @@
            </ul>
         <?php
     }
+
+    function gf_blogs($cantidad=-1){
+      ?>
+        <ul class="listado-grid">
+            <?php 
+                $args=array(
+                    'post_type'=>'post',
+                    'posts_per_page'=>$cantidad
+                );
+
+                $blogs=new WP_Query($args);
+
+                while($blogs->have_posts()){
+                    $blogs->the_post();
+
+                    get_template_part('template-parts/blog'); 
+                }
+                wp_reset_postdata();
+            ?>
+        </ul>
+    <?php
+    }
 ?>

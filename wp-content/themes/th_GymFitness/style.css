@@ -161,7 +161,20 @@ img {
 }
 
 /**---------HEADER----------**/
+body.home .header {
+  padding-top: 2rem;
+  height: auto;
+  min-height: 70rem;
+  background-size: cover;
+  background-position: center center;
+}
 
+@media (min-width: 768px) {
+  body.home .header {
+    height: 100vh;
+    max-height: 90rem;
+  }
+}
 .header {
   background-color: var(--gris-oscuro);
   padding: 2rem 0;
@@ -180,6 +193,20 @@ img {
   }
 }
 
+.tagline {
+  color: var(--blanco);
+  margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+  .tagline {
+    margin-top: 15rem;
+  }
+}
+
+.tagline p {
+  font-size: 2rem;
+}
 /* .menu-principal {
   display: none; 
 } */
