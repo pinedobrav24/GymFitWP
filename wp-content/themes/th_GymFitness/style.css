@@ -180,6 +180,22 @@ body.home .header {
   padding: 2rem 0;
 }
 
+@media (min-width: 992px) {
+  .fixed-top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--gris-oscuro);
+    padding: 1rem 5rem;
+    height: 10rem;
+    z-index: 500;
+    transition: background-color 200ms ease-in-out;
+  }
+  .fixed-top .logo {
+    width: 12rem;
+  }
+}
 .barra-navegacion {
   display: flex;
   flex-direction: column;
@@ -211,6 +227,38 @@ body.home .header {
   display: none; 
 } */
 
+.hambuger-menu:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .hambuger-menu {
+    display: none;
+  }
+}
+
+.contenedor-menu {
+  opacity: 0;
+  max-height: 0;
+  transition-delay: 100ms, 300ms;
+  transition-property: opacity, max-height;
+  transition-timing-function: ease-in-out;
+  transition-duration: 300ms;
+}
+
+@media (min-width: 768px) {
+  .contenedor-menu {
+    all: unset; /* -elimina formatos aplicados-*/
+  }
+}
+.mostrar {
+  opacity: 1;
+  max-height: 35rem;
+  transition-delay: 100ms, 300ms;
+  transition-property: max-height, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 300ms;
+}
 .menu-principal a {
   font-family: var(--fuente-headings);
   display: block;
@@ -794,4 +842,39 @@ body.home .header {
 .testimonial-footer p {
   color: var(--primario);
   font-weight: 700;
+}
+
+/*---- Animación con letras*/
+
+.ml11 {
+  font-weight: 700;
+  font-size: 3.5em;
+}
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
+
+.ml11 .line1 {
+  top: 0;
+  left: 0;
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1em;
 }

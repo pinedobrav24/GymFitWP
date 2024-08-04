@@ -15,27 +15,42 @@
                 </a>
                 
             </div>
-            
+            <div class="hambuger-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="64" height="64" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                </svg>
+            </div>
 
-            <nav>
-                <?php
-                    wp_nav_menu(
-                        array(
-                            'theme_location' => 'menu-principal', //memu
-                            'menu_class' => 'menu-principal', //clase
-                            'container' => 'ul',  //tipo de contenedor
-                            'depth'=>2,
-                            )
-                        );
-                ?>
-            </nav>
+            <div class="contenedor-menu">
+                <nav>
+                    <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'menu-principal', //memu
+                                'menu_class' => 'menu-principal', //clase
+                                'container' => 'ul',  //tipo de contenedor
+                                'depth'=>2,
+                                )
+                            );
+                    ?>
+                </nav> 
+            </div>
+            
         </div> 
 
         <!-- validar si la pagina que esta llamando al header es el front-page (pagina de inicio) !-->
         <?php
             if(is_front_page()){ ?>
               <div class="tagline text-center contenedor">
-                <h1><?php the_field('hero_heading');?></h1>
+                <h1 class="ml11">
+                    <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters"><?php the_field('hero_heading');?></span>
+                    </span>
+                </h1>
                 <p><?php the_field('hero_texto');?></p>
               </div>  
         <?php } ?>       
