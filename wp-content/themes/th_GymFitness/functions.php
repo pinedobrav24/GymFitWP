@@ -28,17 +28,30 @@ function gf_scripts_styles(){
     //Archivos css
     wp_enqueue_style('normalize', get_stylesheet_uri(), array(),'8.0.1');
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize'),'1.0.0');  //nombre de hoja de estilos, ubicacion, paginas previas, version
-    wp_enqueue_style('lightboxcss', get_template_directory_uri() . '/css/lightbox.min.css',array(),'2.11.3');
-    /*wp_enqueue_style('swiper_css',get_template_directory_uri(). '/css/swiper-blundle.min.css',array(),'11.1.8');*/
-    wp_enqueue_style('swiper_css','https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',array(),'11.1.8');
+    
+    if(is_page('galeria')){
+        wp_enqueue_style('lightboxcss', get_template_directory_uri() . '/css/lightbox.min.css',array(),'2.11.3');
+    }
 
+    if(is_front_page()){
+         /*wp_enqueue_style('swiper_css',get_template_directory_uri(). '/css/swiper-blundle.min.css',array(),'11.1.8');*/
+        wp_enqueue_style('swiper_css','https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',array(),'11.1.8');
+    }
+    
 
     //Archivos js
-    wp_enqueue_script('lightboxjs', get_template_directory_uri() . '/js/lightbox.min.js',array('jquery'),'2.11.3',true);
-    /*wp_enqueue_script('swiper_js',get_template_directory_uri(). '/js/swiper-blundle.min.js',array(),'11.1.8',true);*/
-    wp_enqueue_script('swiper_js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',array(),'11.1.8',true);
-    wp_enqueue_script('letters_js', 'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js',array(),'2.0.2',true);
-    wp_enqueue_script('scripts',get_template_directory_uri() . '/js/scripts.js',array('swiper_js'),'1.0.0',true);
+
+    if(is_page('galeria')){
+         wp_enqueue_script('lightboxjs', get_template_directory_uri() . '/js/lightbox.min.js',array('jquery'),'2.11.3',true);
+    }
+    
+    if(is_front_page()){
+         /*wp_enqueue_script('swiper_js',get_template_directory_uri(). '/js/swiper-blundle.min.js',array(),'11.1.8',true);*/
+        wp_enqueue_script('swiper_js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',array(),'11.1.8',true);
+        wp_enqueue_script('letters_js', 'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js',array(),'2.0.2',true);
+    }
+   
+    wp_enqueue_script('scripts',get_template_directory_uri() . '/js/scripts.js',array(),'1.0.0',true);
 }
 
 add_action('wp_enqueue_scripts', 'gf_scripts_styles');

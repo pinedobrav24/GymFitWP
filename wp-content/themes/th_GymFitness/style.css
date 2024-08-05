@@ -21,7 +21,7 @@
   /*-----Colores--------*/
   --primario: #ff5b00;
   --gris-oscuro: #2f2e2e;
-  --gis-claro: #ebebeb;
+  --gris-claro: #ebebeb;
   --blanco: #fff;
   --negro: #000;
 }
@@ -42,6 +42,7 @@ body {
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 2;
+  margin: 0;
 }
 
 /* -------HEADINGS---------*/
@@ -82,7 +83,7 @@ a {
 }
 
 hr {
-  border: 1px solid var(--gis-claro);
+  border: 1px solid var(--gris-claro);
 }
 ul {
   list-style: none;
@@ -116,24 +117,27 @@ img {
 }
 
 /*---Botones---*/
-
+.form-submit .submit,
 .boton {
   background-color: var(--blanco);
   color: var(--negro);
   padding: 1rem 3rem;
   display: block;
   flex: 1;
+  width: 100%;
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 0.5rem;
   margin: 1rem 0;
+  border: none;
 }
 
 @media (min-width: 768px) {
   .boton {
     display: inline-block;
     flex: 0 0 auto;
+    width: auto;
   }
 }
 
@@ -337,6 +341,7 @@ body.home .header {
 }
 
 /*-----FOOTER-------*/
+
 .contenido-footer {
   padding: 4rem 0;
 }
@@ -353,6 +358,15 @@ body.home .header {
   }
 }
 
+.footer .menu-principal {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .footer .menu-principal {
+    display: unset;
+  }
+}
 .footer .menu-principal a {
   color: var(--negro);
   text-align: center;
@@ -487,7 +501,7 @@ body.home .header {
 
 /* ----SIDEBAR - LISTADOS DE CLASES -------*/
 .clases-sidebar li {
-  border-bottom: 1px solid var(--gis-claro);
+  border-bottom: 1px solid var(--gris-claro);
   padding: 2rem 0;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -562,7 +576,7 @@ body.home .header {
 /* -- Información meta --*/
 
 .meta-info {
-  background-color: var(--gis-claro);
+  background-color: var(--gris-claro);
   padding: 2rem;
 }
 
@@ -610,7 +624,7 @@ body.home .header {
 
 .wpcf7-form .wpcf7-form-control {
   width: 100%;
-  border: 1px solid var(--gis-claro);
+  border: 1px solid var(--gris-claro);
   padding: 1rem;
 }
 
@@ -722,7 +736,7 @@ body.home .header {
 
 .instructor {
   margin: 2rem 0;
-  border-bottom: 1px solid var(--gis-claro);
+  border-bottom: 1px solid var(--gris-claro);
 }
 
 .instructor:last-of-type {
@@ -877,4 +891,95 @@ body.home .header {
 .ml11 .letter {
   display: inline-block;
   line-height: 1em;
+}
+
+/* --------- COMENTARIOS ------*/
+
+.comentarios {
+  width: min(95%, 60rem);
+  margin: 5rem auto 0 auto;
+}
+.comment-reply-title {
+  color: var(--primario);
+  text-align: center;
+}
+
+.logged-in-as a {
+  color: var(--primario);
+}
+
+.comment-form-comment label {
+  font-weight: 700;
+  margin: 2rem 0;
+  display: block;
+}
+
+.comment-form-comment textarea {
+  border: 1px solid var(--gris-claro);
+  width: 100%;
+}
+
+.form-submit .submit {
+  background-color: var(--primario);
+  color: var(--blanco);
+}
+
+.comment-form-comment textarea,
+.comentarios input[type="text"] {
+  border: 1px solid var(--gris-claro);
+  width: 100%;
+}
+
+.comentarios input[type="text"] {
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+
+h3.comentarios {
+  margin: 3rem 0;
+}
+
+.lista-comentarios .comment {
+  background-color: var(--gris-claro);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+.lista-comentarios a {
+  color: var(--primario);
+}
+
+.lista-comentraios cite {
+  color: var(--primario);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.lista-comentarios .children .comment {
+  background-color: var(--blanco);
+  margin: 2rem 0;
+}
+
+/* ------- PAGINACION---------*/
+.pagination .screen-reader-text {
+  visibility: hidden;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  font-size: 1.4rem;
+  color: var(--primario);
+  font-weight: 700;
+  padding: 0.5rem;
+}
+
+.nav-links .current {
+  font-size: 1.4rem;
+  padding: 0.5rem;
 }

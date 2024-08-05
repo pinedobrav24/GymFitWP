@@ -2,6 +2,7 @@
 
     <hr>
     <div class="contenido-footer">
+        
         <?php
             $args = array(
                 'theme_location' => 'menu-principal', //memu
@@ -10,7 +11,8 @@
             );
 
             wp_nav_menu($args); //especificar el menú incluido en el args
-        ?>
+        ?> 
+           
         <p class="copyright">Todos los derechos reservados. <?php echo get_bloginfo('name') . " " . date('Y') ?></p>
 
     </div>
